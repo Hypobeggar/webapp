@@ -1,18 +1,28 @@
 html{
-    margin: 2em;
     font-family: "Merriweather";
     background-color: #000;
     color: #C0C0C0;
     line-height: 1.5em;
     font-size: 1.125em;
 }
+body{
+    margin: 0;
+}
+
+.text-padding li{
+    padding-top: 0.5em;
+    margin-left: 1em;
+    list-style:circle;
+}
 
 main{
-
     display: flex;
     flex-direction: column;
     gap: 2em;
+    margin: 2em;
 }
+
+
 h1,
 h2{
     font-family: "Lato";
@@ -27,7 +37,14 @@ ul{
 }
 li{
     list-style: none;
+}
 
+#navbar{
+    display: flex;
+    background-color: #1A1A1A;
+    top: 0%;
+    padding-left: 2em;
+    border-bottom: 2px solid #212121;
 }
 
 section{
@@ -41,7 +58,13 @@ section{
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 2em;
-    margin-bottom: 2em;
+    margin: 2em;
+}
+#profile-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 
@@ -60,7 +83,12 @@ hr{
 }
 
 #portfolio{
-    margin-top: 2em;
+    margin: 2em;
+}
+#statement{
+    font-size: 2em;
+    line-height: 1.5em;
+    color: #ebb800;
 }
 
 @media (min-width: 1024px) 
@@ -92,5 +120,6 @@ hr{
         border-radius: 0;
         border: none;
     }
+
     
 }
