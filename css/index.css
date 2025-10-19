@@ -2,13 +2,13 @@ html{
     margin: 2em;
     font-family: "Merriweather";
     background-color: #000;
-    color: #C0C0C0
-;
+    color: #C0C0C0;
+    line-height: 1.5em;
+    font-size: 1.125em;
 }
 
 main{
-    /*display: grid;
-    row-gap: 2em;*/
+
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -33,10 +33,15 @@ li{
 section{
     background-color: #1A1A1A;
     padding: 1em;
+    border-radius: 1em;
+    border: 2px solid #212121;
 }
 
 #head{
-    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+    margin-bottom: 2em;
 }
 
 
@@ -48,27 +53,34 @@ section{
 hr{
     border-color: #A133D7;
 }
+#flex-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#portfolio{
+    margin-top: 2em;
+}
 
 @media (min-width: 1024px) 
 {
-    /*
-    main{
-    display: grid;
-    gap: 2vw;
-    grid-template-columns: 1fr;
-    }
-    */
     #head{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    border-radius: 1em;
+    border: 2px solid #212121;
+    overflow: hidden;
     }
     .resumeInfo{
-        max-width: 40vw;
-        flex-wrap: wrap;
+        flex: 1 1 45%;
+
     }
-    #experienceS{
-
-
+    #flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2em;
     }
     #experience{
         display: grid;
@@ -76,4 +88,9 @@ hr{
         gap: 2em;
     }
 
+    article section{
+        border-radius: 0;
+        border: none;
+    }
+    
 }
