@@ -7,8 +7,11 @@ html{
 }
 
 main{
-    display: grid;
-    row-gap: 2em;
+    /*display: grid;
+    row-gap: 2em;*/
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 h1,
 h2{
@@ -41,19 +44,27 @@ section{
     max-width: 33vw;
     max-height: 25em
 }
+
+hr{
+    border-color: #A133D7;
+}
+
 @media (min-width: 1024px) 
 {
+    /*
     main{
     display: grid;
     gap: 2vw;
     grid-template-columns: 1fr;
     }
+    */
     #head{
     display: grid;
     grid-template-columns: 1fr 2fr;
     }
     .resumeInfo{
-
+        max-width: 40vw;
+        flex-wrap: wrap;
     }
     #experienceS{
 
