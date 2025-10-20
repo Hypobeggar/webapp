@@ -22,11 +22,15 @@ main{
     margin: 2em;
 }
 
-
 h1,
 h2{
     font-family: "Lato";
     color: #ebb800;
+}
+
+h1{
+    font-size: 2.5em;
+
 }
 h3{
     color: #A133D7;
@@ -42,9 +46,25 @@ li{
 #navbar{
     display: flex;
     background-color: #1A1A1A;
-    top: 0%;
     padding-left: 2em;
+    padding-right: 2em;
     border-bottom: 2px solid #212121;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar a{
+    padding: 30px;
+    background-color: #212121;
+    text-decoration: none;
+}
+#navbar a:link,
+#navbar a:visited,
+#navbar a:active{
+    color: #D3D3D3;
+}
+#navbar a:hover{
+    background-color: #ebb800;
 }
 
 section{
@@ -70,7 +90,8 @@ section{
 
 #profile{
     max-width: 33vw;
-    max-height: 25em
+    max-height: 25em;
+    border-radius: 8px;
 }
 
 hr{
