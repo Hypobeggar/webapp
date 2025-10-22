@@ -22,7 +22,7 @@ async function carouselTurn() {
         }
     }
 }
-leftCaraButton.addEventListener("click", async function(){
+leftCaraButton.addEventListener("click", function(){
     if (count!=0){
         count-=1;
     } else {
@@ -31,7 +31,7 @@ leftCaraButton.addEventListener("click", async function(){
     caraImg.src=imgs[count];
 });
 
-rightCaraButton.addEventListener("click", async function(){
+rightCaraButton.addEventListener("click", function(){
 
     if (count!=imgs.length-1){
         count+=1;
