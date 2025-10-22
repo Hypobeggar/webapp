@@ -112,6 +112,24 @@ hr{
     color: #ebb800;
 }
 
+#carousel{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+#carousel-img{
+    max-width: 70%;
+
+
+}
+
+.caraButtons{
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+}
+
 @media (min-width: 1024px) 
 {
     #head{
