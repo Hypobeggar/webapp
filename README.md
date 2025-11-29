@@ -4,8 +4,6 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## React Compiler
 
@@ -42,6 +40,34 @@ export default defineConfig([
   },
 ])
 ```
+
+---
+
+Conversion / migration notes
+- The old static site in `old/` was converted to React components. To reproduce the old visuals:
+  - App landing page styling is now in `src/assets/app.css` and mirrors `old/css/index.css`.
+  - The printable/plain resume styling is in `src/assets/external.css` (based on `old/css/plain.css`).
+  - Images were moved to `src/assets/img` for bundling.
+
+  Tailwind / PostCSS
+  ------------------
+  We added Tailwind and PostCSS configuration files (`tailwind.config.cjs`, `postcss.config.cjs`). To enable Tailwind locally, run either:
+
+  ```bash
+  # install dependencies listed in package.json
+  npm install
+
+  # or install manually if you prefer
+  npm install -D tailwindcss postcss autoprefixer
+  npx tailwindcss init -p
+  ```
+
+  Notes: Vite will process Tailwind directives in `src/index.css` through PostCSS when you run `npm run dev` or `npm run build`. If your shell blocks npm in PowerShell, run the commands in cmd.exe or another shell.
+
+  Status: Tailwind installed
+  -------------------------
+  Tailwind + PostCSS + Autoprefixer have been added to this project's devDependencies and a production build successfully completed during verification. If you pull this branch, run `npm install` and `npm run dev` to start the dev server — Vite will process the Tailwind directives automatically.
+
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 

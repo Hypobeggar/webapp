@@ -1,3 +1,9 @@
+
+/* Tailwind base, components & utilities - requires tailwindcss toolchain */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,6 +18,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Tailwind base, components & utilities - requires tailwindcss toolchain */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 a {
   font-weight: 500;
