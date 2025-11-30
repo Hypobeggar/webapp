@@ -8,7 +8,7 @@ html{
 }
 body{ margin: 0; }
 
-.text-padding li{ padding-top: 0.5em; margin-left: 1em; list-style:circle; }
+.text-padding li{ padding-top: 0.5em; margin-left: 1em; list-style:none; }
 
 main{ display: flex; flex-direction: column; gap: 2em; margin: 2em; }
 

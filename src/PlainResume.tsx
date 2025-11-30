@@ -1,4 +1,4 @@
-export default function PlainResume() {
+export default function PlainResume({ onBack }:{ onBack?: () => void }) {
   function handlePrint() {
     // print stylesheet hides .no-print items, so simply call print()
     window.print()
@@ -9,7 +9,7 @@ export default function PlainResume() {
       <nav className="flex items-center justify-between mb-6 no-print">
         <h1 className="text-3xl font-semibold">Zach Watson</h1>
         <div className="flex gap-2 items-center">
-          <a id="toMain" className="text-sm underline text-blue-600" href="#main">Main Resume</a>
+          <button id="toMain" onClick={() => onBack ? onBack() : window.location.hash = '#main'} className="text-sm underline text-blue-600">Main Resume</button>
           <button id="print-plain" className="print-plain no-print border px-3 py-1 rounded-md" onClick={handlePrint}>Print Resume</button>
         </div>
       </nav>
@@ -26,7 +26,7 @@ export default function PlainResume() {
       <main id="container" className="grid md:grid-cols-2 gap-6">
         <section className="resumeInfo">
           <h2 className="text-lg font-semibold">Technical Skills</h2>
-          <ul className="list-disc pl-5 mt-2 text-sm">
+          <ul className="text-padding mt-2 text-sm">
             <li>JavaScript (ES6+), HTML5, CSS3, Python, SQL</li>
             <li>React, Node.js, Express.js, Tailwind CSS</li>
             <li>Git, GitHub, VS Code, Figma, Firebase, REST APIs</li>
