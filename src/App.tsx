@@ -4,13 +4,11 @@ import './assets/app.css'
 import PlainResume from './PlainResume.tsx'
 import { PortfolioCarousel } from './components/PortfolioCarousel'
 import profile from './assets/img/profile.jpg'
-// the simple Carousel component is used by PortfolioCarousel
+
 
 function App() {
-  // counter removed — not used by landing resume
   const [page, setPage] = useState<'main'|'plain'>('main')
 
-  // images are provided to Carousel by the PortfolioCarousel component; no top-level imgs required here
 
   return (
 <div className="bg-black text-gray-300 font-merriweather">

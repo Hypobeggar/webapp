@@ -1,7 +1,9 @@
 import Carousel from './carousel'
+import ProjectGrid from './ProjectGrid'
 import img1 from '../assets/img/1.jpeg'
 import img2 from '../assets/img/2.jpg'
 import img3 from '../assets/img/3.jpg'
+import profileImg from '../assets/img/profile.jpg'
 
 const featuredProjects = [
   {
@@ -31,6 +33,52 @@ const featuredProjects = [
     link: "#",
     github: "#"
   }
+  ,
+  {
+    id: 4,
+    title: "Realtime Chat App",
+    description: "A highly performant messaging solution with presence, typing indicators, and ephemeral rooms.",
+    image: img1,
+    tech: ["Socket.io", "Node.js", "React", "Redis"],
+    link: "#",
+    github: "#"
+  },
+  {
+    id: 5,
+    title: "Analytics Dashboard",
+    description: "Customizable charts and real-time metrics tailored for product and business analytics.",
+    image: img2,
+    tech: ["D3.js", "TypeScript", "Node.js", "PostgreSQL"],
+    link: "#",
+    github: "#"
+  },
+  {
+    id: 6,
+    title: "Static Site Generator",
+    description: "A lightning-fast SSG built for blogs and docs using modern compile-to-web tooling.",
+    image: img3,
+    tech: ["Svelte", "Rust", "WASM"],
+    link: "#",
+    github: "#"
+  },
+  {
+    id: 7,
+    title: "DevOps Pipeline",
+    description: "A container-driven CI/CD pipeline with automated testing, linting and infrastructure as code.",
+    image: profileImg,
+    tech: ["Docker", "Kubernetes", "CI/CD", "Terraform"],
+    link: "#",
+    github: "#"
+  },
+  {
+    id: 8,
+    title: "3D Visualizer",
+    description: "Interactive 3D product visualizations and immersive UIs for web-based experiences.",
+    image: img2,
+    tech: ["Three.js", "WebGL", "React", "Canvas"],
+    link: "#",
+    github: "#"
+  }
 ];
 
 export function PortfolioCarousel() {
@@ -39,8 +87,9 @@ export function PortfolioCarousel() {
       <div className="max-w-6xl mx-auto">
 
 
+        {/* Carousel should show only the original 3 featured projects */}
         <Carousel className="w-full" intervalMs={4000}>
-          {featuredProjects.map((project) => (
+          {featuredProjects.slice(0, 3).map((project) => (
             <div key={project.id} className="grid md:grid-cols-2 gap-8 bg-[#1A1A1A] rounded-lg overflow-hidden border border-[#912DE1]/30 hover:border-[#A133D7] transition-all">
                   {/* Image Side */}
                   <div className="relative h-80 md:h-auto overflow-hidden">
@@ -92,6 +141,9 @@ export function PortfolioCarousel() {
                 </div>
           ))}
         </Carousel>
+        
+        {/* Projects grid under the carousel */}
+        <ProjectGrid projects={featuredProjects} />
       </div>
     </section>
   );
