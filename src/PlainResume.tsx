@@ -10,8 +10,8 @@ export default function PlainResume() {
           <nav>
             <h1>Zach Watson</h1>
             <div className="flex gap-3 mb-2">
-              <a href="/" className={"${styles.noPrint} pt-1 pb-1"}>Main Resume</a>
-              <button className={"${styles.noPrint} p-1 bg-[#DBDBDB] border border-black"} onClick={handlePrint}>Print Resume</button>
+              <a href="/" className={`${styles.noPrint} pt-1 pb-1`}>Main Resume</a>
+              <button className={`${styles.noPrint} p-1 bg-[#DBDBDB] border border-black`} onClick={handlePrint}>Print Resume</button>
             </div>
         </nav>
         <section>
