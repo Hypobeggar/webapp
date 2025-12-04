@@ -1,12 +1,11 @@
-/* App-specific styling adapted from old/css/index.css */
-html{
+body{
     font-family: "Merriweather";
     background-color: #000;
     color: #C0C0C0;
     line-height: 1.5em;
     font-size: 1.125em;
 }
-body{ margin: 0; }
+
 
 .text-padding li{ padding-top: 0.5em; margin-left: 1em; list-style:none; }
 

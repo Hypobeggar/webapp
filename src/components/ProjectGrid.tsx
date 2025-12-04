@@ -19,14 +19,12 @@ export default function ProjectGrid({ projects }: Props) {
   const [selectedTech, setSelectedTech] = useState<string | null>(null)
   const [sortMode, setSortMode] = useState<'relevance'|'alpha'>('relevance')
 
-  // all unique tech values
   const allTech = useMemo(() => {
     const set = new Set<string>()
     projects.forEach(p => p.tech.forEach(t => set.add(t)))
     return Array.from(set).sort((a,b) => a.localeCompare(b))
   }, [projects])
 
-  // Filtering + sorting
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     let list = projects.filter(p => {
@@ -38,7 +36,7 @@ export default function ProjectGrid({ projects }: Props) {
     if (sortMode === 'alpha') {
       list = list.slice().sort((a,b) => a.title.localeCompare(b.title))
     } else if (sortMode === 'relevance' && selectedTech) {
-      // ranking by presence and number of matches for selected
+
       list = list.slice().sort((a,b) => {
         const aHas = a.tech.includes(selectedTech) ? 1 : 0
         const bHas = b.tech.includes(selectedTech) ? 1 : 0
@@ -97,7 +95,7 @@ export default function ProjectGrid({ projects }: Props) {
         ) : (
           filtered.map(project => (
             <article key={project.id} className="relative bg-[#1A1A1A] p-6 rounded-lg border border-[#212121] flex gap-4 overflow-hidden">
-              {/* background image -- translucent and behind content */}
+
               {project.image ? (
                 <img
                   src={project.image}
@@ -106,7 +104,7 @@ export default function ProjectGrid({ projects }: Props) {
                   className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
                 />
               ) : null}
-              {/* dim layer to keep text readable */}
+
               <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/60 via-transparent to-transparent pointer-events-none" />
 
               <div className="relative flex-1 z-10">

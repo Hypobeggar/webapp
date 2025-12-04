@@ -5,51 +5,113 @@ export default function PlainResume({ onBack }:{ onBack?: () => void }) {
   }
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <nav className="flex items-center justify-between mb-6 no-print">
-        <h1 className="text-3xl font-semibold">Zach Watson</h1>
-        <div className="flex gap-2 items-center">
-          <button id="toMain" onClick={() => onBack ? onBack() : window.location.hash = '#main'} className="text-sm underline text-blue-600">Main Resume</button>
-          <button id="print-plain" className="print-plain no-print border px-3 py-1 rounded-md" onClick={handlePrint}>Print Resume</button>
-        </div>
-      </nav>
-
-      <section className="mb-4 text-sm">
-        <p>Austin, TX | (512) 555-0193 | zach.watson@email.com — <a href="https://www.linkedin.com/in/zach-w-133415383/" target="_blank" className="underline text-blue-600">LinkedIn</a> • <a href="https://github.com/Hypobeggar" target="_blank" className="underline text-blue-600">GitHub</a></p>
-      </section>
-
-      <section className="mb-6">
-        <h2 className="text-lg font-semibold">Professional Summary</h2>
-        <p className="text-sm mt-2">Creative and detail-oriented Web Developer with 4+ years of experience designing, building, and optimizing responsive websites and web applications.</p>
-      </section>
-
-      <main id="container" className="grid md:grid-cols-2 gap-6">
-        <section className="resumeInfo">
-          <h2 className="text-lg font-semibold">Technical Skills</h2>
-          <ul className="text-padding mt-2 text-sm">
-            <li>JavaScript (ES6+), HTML5, CSS3, Python, SQL</li>
-            <li>React, Node.js, Express.js, Tailwind CSS</li>
-            <li>Git, GitHub, VS Code, Figma, Firebase, REST APIs</li>
-          </ul>
+    <div>
+          <nav >
+            <h1>Zach Watson</h1>
+            <a id="toMain" href="index.html">Main Resume</a>
+            <button id="print-plain">Print Resume</button>
+        </nav>
+        <section>
+            <p>Austin, TX | (512) 555-0193 | zach.watson@email.com | 
+                <a href="https://www.linkedin.com/in/zach-w-133415383/" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/Hypobeggar" target="_blank">GitHub</a>
+            </p>
         </section>
 
-        <section className="resumeInfo">
-          <h2 className="text-lg font-semibold">Education</h2>
-          <h3 className="font-bold">Bachelor of Science in Computer Science — University of Texas at Austin</h3>
-          <p className="text-xs text-gray-600">August 2017 – May 2021 | Austin, TX</p>
-        </section>
+            <section>
+                <h2>Professional Summary</h2>
+                <p>Creative and detail-oriented Web Developer with 4+ years of experience designing, building, and optimizing responsive websites and web applications. Skilled in both front-end and back-end technologies, with a focus on clean UI, strong UX, and scalable code. Passionate about building modern digital experiences that bridge technology and design.</p>
+            </section>
+        <main id="container">
+            <section className="resumeInfo">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Languages: JavaScript (ES6+), HTML5, CSS3, Python, SQL</li>
+                    <li>Frameworks & Libraries: React, Node.js, Express.js, Tailwind CSS, Bootstrap</li>
+                    <li>Tools & Platforms: Git, GitHub, VS Code, Figma, Firebase, REST APIs</li>
+                    <li>Other Skills: Responsive Design, Accessibility, SEO Optimization, Agile Development</li>
+                </ul>
+            </section>
+            <section className="resumeInfo">
+                <h2>Education</h2>
+                <h3>Bachelor of Science in Computer Science — University of Texas at Austin</h3>
+                <p>August 2017 – May 2021 | Austin, TX</p>
+                <ul>
+                    <li>Coursework: Web Application Development, Data Structures, Database Systems, Human-Computer Interaction</li>
+                    <li>Graduated with Honors (GPA: 3.8/4.0)</li>
+                </ul>
+            </section>
 
-        <section className="resumeInfo">
-          <h2 className="text-lg font-semibold">Professional Experience</h2>
-          <h3 className="font-bold">Front-End Web Developer — Creative Spark Digital Agency</h3>
-          <p className="text-xs text-gray-600">March 2022 – Present</p>
-        </section>
+            <section className="resumeInfo">
+                <div>
+                    <h2>Professional Experience</h2>
+                
+                    <h3>Front-End Web Developer — Creative Spark Digital Agency</h3>
+                    <p>March 2022 – Present | Austin, TX</p>
+                    <ul>
+                        <li>Developed and maintained responsive websites for 15+ clients using React and Tailwind CSS.</li>
+                        <li>Collaborated with UX designers to enhance site accessibility and performance, improving page load speed by 35%.</li>
+                        <li>Built dynamic dashboards and data visualization tools using REST APIs and Chart.js.</li>
+                        <li>Implemented Git version control and agile workflows to streamline project collaboration.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Web Developer Intern — TechWorks Studio</h3>
+                    <p>June 2021 – February 2022 | Remote</p>
+                    <ul>
+                        <li>Supported development of e-commerce sites using Node.js and MongoDB.</li>
+                        <li>Assisted in debugging front-end issues and improving user experience across browsers and devices.</li>
+                        <li>Integrated third-party APIs for payment processing and authentication.</li>
+                        <li>Contributed to project documentation and user guides.</li>
+                    </ul>
+                </div>
+                </section>
 
-        <section className="resumeInfo">
-          <h2 className="text-lg font-semibold">Projects</h2>
-          <h3 className="font-bold">Portfolio Website — <a href="https://zachwatson.dev" target="_blank" className="underline text-blue-600">zachwatson.dev</a></h3>
-        </section>
-      </main>
+
+
+            <section className="resumeInfo">
+                <h2>Projects</h2>
+            
+                <h3>Portfolio Website — <a href="https://zachwatson.dev" target="_blank">zachwatson.dev</a></h3>
+                <ul>
+                    <li>Designed and built a personal portfolio using React and Framer Motion animations.</li>
+                    <li>Features an interactive project gallery and integrated contact form using EmailJS.</li>
+                </ul>
+            
+                <h3>TaskFlow App</h3>
+                <ul>
+                    <li>Developed a productivity web app using React, Firebase, and Tailwind CSS.</li>
+                    <li>Implemented real-time data syncing and authentication with Firebase.</li>
+                    <li>Acquired 500+ active users within three months of launch.</li>
+                </ul>
+            </section>
+
+            <section className="resumeInfo">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Meta Front-End Developer Professional Certificate — Coursera (2024)</li>
+                    <li>JavaScript Algorithms and Data Structures — freeCodeCamp (2023)</li>
+                </ul>
+            </section>
+
+            <section className="resumeInfo">
+                <h2>Awards & Recognition</h2>
+                <ul>
+                    <li>1st Place, HackTX 2020 — Built a “Local Relief Finder” web app for small businesses during COVID-19.</li>
+                    <li>Dean’s List, University of Texas (2018–2021)</li>
+                </ul>
+            </section>
+
+            <section className="resumeInfo">
+                <h2>Volunteer Experience</h2>
+                <h3>Volunteer Web Developer — Austin Coding Alliance</h3>
+                <p>January 2023 – Present</p>
+                <ul>
+                    <li>Built and maintained a non-profit website promoting free coding workshops for underrepresented communities.</li>
+                    <li>Implemented accessibility improvements meeting WCAG 2.1 standards.</li>
+                </ul>
+            </section>
+        </main>
     </div>
   )
 }

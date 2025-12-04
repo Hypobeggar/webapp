@@ -1,8 +1,8 @@
-/* External CSS for fonts and print rules (keeps project styles separate from tailwind utilities) */
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
-/* Old plain.css rules adapted */
+
 html{
   margin: 2em;
   font-family: 'Merriweather', serif;
@@ -12,7 +12,7 @@ h1,h2,h3{
   font-family: 'Lato', system-ui, sans-serif;
 }
 
-/* Ensure plain resume lists do not render default bullets (we use .text-padding where necessary) */
+
 ul, li { list-style: none; padding: 0; margin: 0; }
 
 @media (min-width: 720px) {
@@ -31,7 +31,7 @@ ul, li { list-style: none; padding: 0; margin: 0; }
   }
 }
 
-/* Print helpers: when printing hide nav and buttons */
+/* Hide unnecessary items for printing */
 .no-print { display: inline-block; }
 @media print {
   .no-print { display: none !important; }
