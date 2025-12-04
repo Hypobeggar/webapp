@@ -1,4 +1,4 @@
-import './assets/plain.css'
+import styles from './assets/Plain.module.css'
 
 export default function PlainResume() {
   function handlePrint() {
@@ -6,7 +6,7 @@ export default function PlainResume() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
           <nav>
             <h1>Zach Watson</h1>
             <div style={{ display: 'flex', gap: '1rem' }}>
