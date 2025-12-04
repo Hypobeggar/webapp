@@ -34,7 +34,6 @@ export default function Carousel({ images, intervalMs = 5000, children }: Carous
   }, [slideCount, intervalMs])
 
 
-
   return (
     <div
       ref={ref}
