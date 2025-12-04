@@ -1,4 +1,4 @@
-import styles from './assets/Plain.module.css'
+import styles from './assets/plain.module.css'
 
 export default function PlainResume() {
   function handlePrint() {
@@ -9,9 +9,9 @@ export default function PlainResume() {
     <div className={styles.container}>
           <nav>
             <h1>Zach Watson</h1>
-            <div style={{ display: 'flex', gap: '1rem' }}>
-              <a href="/">Main Resume</a>
-              <button id="print-plain" onClick={handlePrint}>Print Resume</button>
+            <div className="flex gap-3 mb-2">
+              <a href="/" className={"${styles.noPrint} pt-1 pb-1"}>Main Resume</a>
+              <button className={"${styles.noPrint} p-1 bg-[#DBDBDB] border border-black"} onClick={handlePrint}>Print Resume</button>
             </div>
         </nav>
         <section>
@@ -23,11 +23,12 @@ export default function PlainResume() {
 
             <section>
                 <h2>Professional Summary</h2>
-                <p>Creative and detail-oriented Web Developer with 4+ years of experience designing, building, and optimizing responsive websites and web applications. Skilled in both front-end and back-end technologies, with a focus on clean UI, strong UX, and scalable code. Passionate about building modern digital experiences that bridge technology and design.</p>
+                <p className="mb-5">Creative and detail-oriented Web Developer with 4+ years of experience designing, building, and optimizing responsive websites and web applications. Skilled in both front-end and back-end technologies, with a focus on clean UI, strong UX, and scalable code. Passionate about building modern digital experiences that bridge technology and design.</p>
             </section>
-        <main id="container">
-            <section className="resumeInfo">
+        <main className={styles.main}>
+            <section className={styles.resumeInfo}>
                 <h2>Technical Skills</h2>
+                <hr/>
                 <ul>
                     <li>Languages: JavaScript (ES6+), HTML5, CSS3, Python, SQL</li>
                     <li>Frameworks & Libraries: React, Node.js, Express.js, Tailwind CSS, Bootstrap</li>
@@ -35,8 +36,9 @@ export default function PlainResume() {
                     <li>Other Skills: Responsive Design, Accessibility, SEO Optimization, Agile Development</li>
                 </ul>
             </section>
-            <section className="resumeInfo">
+            <section className={styles.resumeInfo}>
                 <h2>Education</h2>
+                <hr/>
                 <h3>Bachelor of Science in Computer Science — University of Texas at Austin</h3>
                 <p>August 2017 – May 2021 | Austin, TX</p>
                 <ul>
@@ -45,10 +47,10 @@ export default function PlainResume() {
                 </ul>
             </section>
 
-            <section className="resumeInfo">
+            <section className={styles.resumeInfo}>
                 <div>
                     <h2>Professional Experience</h2>
-                
+                    <hr/>
                     <h3>Front-End Web Developer — Creative Spark Digital Agency</h3>
                     <p>March 2022 – Present | Austin, TX</p>
                     <ul>
@@ -72,9 +74,9 @@ export default function PlainResume() {
 
 
 
-            <section className="resumeInfo">
+            <section className={styles.resumeInfo}>
                 <h2>Projects</h2>
-            
+                <hr/>
                 <h3>Portfolio Website — <a href="https://zachwatson.dev" target="_blank">zachwatson.dev</a></h3>
                 <ul>
                     <li>Designed and built a personal portfolio using React and Framer Motion animations.</li>
@@ -89,24 +91,27 @@ export default function PlainResume() {
                 </ul>
             </section>
 
-            <section className="resumeInfo">
+            <section className={styles.resumeInfo}>
                 <h2>Certifications</h2>
+                <hr/>
                 <ul>
                     <li>Meta Front-End Developer Professional Certificate — Coursera (2024)</li>
                     <li>JavaScript Algorithms and Data Structures — freeCodeCamp (2023)</li>
                 </ul>
             </section>
 
-            <section className="resumeInfo">
+            <section className={styles.resumeInfo}>
                 <h2>Awards & Recognition</h2>
+                <hr/>
                 <ul>
                     <li>1st Place, HackTX 2020 — Built a “Local Relief Finder” web app for small businesses during COVID-19.</li>
                     <li>Dean’s List, University of Texas (2018–2021)</li>
                 </ul>
             </section>
 
-            <section className="resumeInfo">
+            <section className={styles.resumeInfo}>
                 <h2>Volunteer Experience</h2>
+                <hr/>
                 <h3>Volunteer Web Developer — Austin Coding Alliance</h3>
                 <p>January 2023 – Present</p>
                 <ul>

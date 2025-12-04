@@ -2,36 +2,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
-
-body{
+.container {
+  margin: 2em;
   font-family: 'Merriweather', serif;
 }
 
-h1,h2,h3{
-  font-family: 'Lato', system-ui, sans-serif;
+.container h1,
+.container h2,
+.container h3 {
+  font-family: 'Lato', sans-serif;
+  margin-top: 0.5em;
+  font-weight: 700;
+}
+.container h1{
+  font-size: 2em;
+}
+.container h2{
+  font-size: 1.5em;
+}
+.container h3{
+  font-size: 1.25em;
 }
 
+.container ul,
+.container li {
+  list-style: disc;
+  padding: 0;
 
-ul, li { list-style: none; padding: 0; margin: 0; }
+  margin-top: 0.5em;
+}
+.container li {
+  margin-left: 2em;;
+}
+.container a{
+  color: #0000EE;         
+  text-decoration: underline;    
+  font-weight: normal;         
+}
+
+.container a:visited {
+  color: #6a1b9a; 
+}
+
+.container a:hover {
+  color: #0d47a1;
+}
+
+.container a:active {
+  color: #e53935; 
+}
+
+.container hr {
+  height: 2px;
+  background-color: black;
+}
+
+.noPrint {
+  display: inline-block;
+}
 
 @media (min-width: 720px) {
-  main {
+  .main {
     display: grid;
     gap: 2vw;
     grid-template-columns: 1fr 1fr;
   }
 
-  .resumeInfo{
+  .resumeInfo {
     max-width: 45vw;
   }
 
-  #experience{
-    grid-column-start: span 2;
+  .experience {
+    grid-column: 1 / -1;
   }
 }
 
 /* Hide unnecessary items for printing */
-.no-print { display: inline-block; }
 @media print {
-  .no-print { display: none !important; }
+  .noPrint {
+    display: none !important;
+  }
 }
