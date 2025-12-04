@@ -6,7 +6,7 @@ type CarouselProps = {
   className?: string
 }
 
-export default function Carousel({ images, intervalMs = 5000, className, children }: CarouselProps & { children?: React.ReactNode }) {
+export default function Carousel({ images, intervalMs = 5000, children }: CarouselProps & { children?: React.ReactNode }) {
   const [index, setIndex] = useState(0)
   const paused = useRef(false)
   const ref = useRef<HTMLDivElement | null>(null)
