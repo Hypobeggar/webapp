@@ -1,5 +1,5 @@
 import { PortfolioCarousel } from './components/PortfolioCarousel'
-import styles from './assets/main.module.css'
+import styles from './assets/Main.module.css'
 import {Link } from "react-router";
 
 export default function MainResume() {
