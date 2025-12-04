@@ -7,7 +7,7 @@ export default function PlainResume() {
 
   return (
     <div>
-          <nav >
+          <nav>
             <h1>Zach Watson</h1>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <a href="/">Main Resume</a>
