@@ -128,7 +128,7 @@ export function PortfolioCarousel() {
                       </a>
                       <a 
                         href={project.github}
-                        className="flex items-center gap-2 px-6 py-3 bg-[#1A1A1A] border border-[#00DEDE] hover:bg-[#00DEDE]/10 text-[#00DEDE] rounded transition-all">
+                        className="flex items-center gap-2 px-6 py-3 bg-[#1A1A1A] border border-[#00DEDE] hover:bg-[#00DEDE]/10 text-white rounded transition-all">
                         <span aria-hidden className="w-4 h-4 inline-block">💻</span>
                         Code
                       </a>

@@ -14,7 +14,7 @@
 
 .container a {
   font-weight: 500;
-  color: #646cff;
+  color: #C0C0C0;
   text-decoration: inherit;
 }
 
@@ -188,6 +188,7 @@
 
 .carousel { 
   display: flex; 
+  min-height: 400px;
   justify-content: space-between; 
   align-items: center; 
 }
@@ -201,7 +202,6 @@
 .caraButtons { 
   height: 5em; 
   width: 5em; 
-  border-radius: 50%; 
   user-select: none; 
 }
 

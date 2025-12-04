@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-
+import styles from '../assets/main.module.css'
 type CarouselProps = {
   images?: string[]
   intervalMs?: number
@@ -37,9 +37,8 @@ export default function Carousel({ images, intervalMs = 5000, className, childre
 
   return (
     <div
-      id="carousel"
       ref={ref}
-      className={`mt-2 ${className ?? ''}`}
+      className={styles.carousel}
       tabIndex={0}
       onMouseEnter={() => (paused.current = true)}
       onMouseLeave={() => (paused.current = false)}
@@ -50,8 +49,7 @@ export default function Carousel({ images, intervalMs = 5000, className, childre
       aria-label="Portfolio carousel"
     >
       <button
-        id="caraLeft"
-        className="caraButtons no-print"
+        className={"${styles.caraButtons} mr-1"}
         type="button"
         aria-label="Previous"
         onClick={() => setIndex((i) => (i - 1 + slideCount) % slideCount)}
@@ -64,12 +62,11 @@ export default function Carousel({ images, intervalMs = 5000, className, childre
           {React.Children.toArray(children)[index as number]}
         </div>
       ) : (
-        <img id="carousel-img" src={images?.[index]} alt={`Portfolio image ${index + 1}`} />
+        <img className={styles.carouselImg} src={images?.[index]} alt={`Portfolio image ${index + 1}`} />
       )}
 
       <button
-        id="caraRight"
-        className="caraButtons no-print"
+        className={"${styles.caraButtons} ml-1"}
         type="button"
         aria-label="Next"
         onClick={() => setIndex((i) => (i + 1) % slideCount)}
