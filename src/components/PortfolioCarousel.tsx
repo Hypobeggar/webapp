@@ -11,7 +11,7 @@ const featuredProjects = [
     title: "E-Commerce Platform",
     description: "A fully responsive online shopping experience with real-time inventory management and secure payment processing.",
     image: img1,
-    tech: ["React", "Node.js", "Stripe", "MongoDB"],
+    tech: ["React", "Node.js", "MongoDB"],
     link: "#",
     github: "#"
   },
@@ -20,7 +20,7 @@ const featuredProjects = [
     title: "Creative Portfolio App",
     description: "Interactive portfolio showcase with smooth animations and dynamic content loading for artists and designers.",
     image: img2,
-    tech: ["Next.js", "Framer Motion", "TypeScript"],
+    tech: [ "React", "TypeScript", "Tailwind CSS"],
     link: "#",
     github: "#"
   },
@@ -39,7 +39,7 @@ const featuredProjects = [
     title: "Realtime Chat App",
     description: "A highly performant messaging solution with presence, typing indicators, and ephemeral rooms.",
     image: img1,
-    tech: ["Socket.io", "Node.js", "React", "Redis"],
+    tech: ["Tailwind CSS", "Node.js", "React"],
     link: "#",
     github: "#"
   },
@@ -48,7 +48,7 @@ const featuredProjects = [
     title: "Analytics Dashboard",
     description: "Customizable charts and real-time metrics tailored for product and business analytics.",
     image: img2,
-    tech: ["D3.js", "TypeScript", "Node.js", "PostgreSQL"],
+    tech: ["TypeScript", "Node.js", "PostgreSQL"],
     link: "#",
     github: "#"
   },
@@ -57,7 +57,7 @@ const featuredProjects = [
     title: "Static Site Generator",
     description: "A lightning-fast SSG built for blogs and docs using modern compile-to-web tooling.",
     image: img3,
-    tech: ["Svelte", "Rust", "WASM"],
+    tech: [ "Angular"],
     link: "#",
     github: "#"
   },
@@ -66,7 +66,7 @@ const featuredProjects = [
     title: "DevOps Pipeline",
     description: "A container-driven CI/CD pipeline with automated testing, linting and infrastructure as code.",
     image: profileImg,
-    tech: ["Docker", "Kubernetes", "CI/CD", "Terraform"],
+    tech: ["React"],
     link: "#",
     github: "#"
   },
@@ -75,7 +75,7 @@ const featuredProjects = [
     title: "3D Visualizer",
     description: "Interactive 3D product visualizations and immersive UIs for web-based experiences.",
     image: img2,
-    tech: ["Three.js", "WebGL", "React", "Canvas"],
+    tech: [ "WebGL", "React", "Canvas"],
     link: "#",
     github: "#"
   }
@@ -87,7 +87,6 @@ export function PortfolioCarousel() {
       <div className="max-w-6xl mx-auto">
 
 
-        {/* Carousel should show only the original 3 featured projects */}
         <Carousel className="w-full" intervalMs={4000}>
           {featuredProjects.slice(0, 3).map((project) => (
             <div key={project.id} className="grid md:grid-cols-2 gap-8 bg-[#1A1A1A] rounded-lg overflow-hidden border border-[#912DE1]/30 hover:border-[#A133D7] transition-all">
@@ -114,8 +113,7 @@ export function PortfolioCarousel() {
                       {project.tech.map((tech) => (
                         <span 
                           key={tech}
-                          className="px-3 py-1 bg-[#912DE1]/20 border border-[#912DE1]/50 rounded text-[#D3D3D3]"
-                        >
+                          className="px-3 py-1 bg-[#912DE1]/20 border border-[#912DE1]/50 rounded text-[#D3D3D3]">
                           {tech}
                         </span>
                       ))}
@@ -124,15 +122,13 @@ export function PortfolioCarousel() {
                     <div className="flex gap-4">
                       <a 
                         href={project.link}
-                        className="flex items-center gap-2 px-6 py-3 bg-[#912DE1] hover:bg-[#A133D7] text-white rounded transition-all"
-                      >
+                        className="flex items-center gap-2 px-6 py-3 bg-[#912DE1] hover:bg-[#A133D7] text-white rounded transition-all">
                         <span aria-hidden className="w-4 h-4 inline-block">🔗</span>
                         View Live
                       </a>
                       <a 
                         href={project.github}
-                        className="flex items-center gap-2 px-6 py-3 bg-[#1A1A1A] border border-[#00DEDE] hover:bg-[#00DEDE]/10 text-[#00DEDE] rounded transition-all"
-                      >
+                        className="flex items-center gap-2 px-6 py-3 bg-[#1A1A1A] border border-[#00DEDE] hover:bg-[#00DEDE]/10 text-[#00DEDE] rounded transition-all">
                         <span aria-hidden className="w-4 h-4 inline-block">💻</span>
                         Code
                       </a>
