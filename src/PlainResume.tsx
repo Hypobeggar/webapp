@@ -1,4 +1,4 @@
-import styles from './assets/plain.module.css'
+import styles from './assets/Plain.module.css'
 
 export default function PlainResume() {
   function handlePrint() {
