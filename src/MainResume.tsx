@@ -1,6 +1,6 @@
 import { PortfolioCarousel } from './components/PortfolioCarousel'
 import styles from './assets/Main.module.css'
-import profileImg from './assets/img/profile.jpg'
+
 import {Link } from "react-router";
 
 export default function MainResume() {
@@ -12,7 +12,6 @@ export default function MainResume() {
     </nav>
     <article className={styles.head}>
         <section className={styles.profileSection}>
-            <img className={styles.profile} src={profileImg} alt="profile image"/>
             <p className='mb-2 mt-2'>Austin, TX | (512) 555-0193 | zach.watson@email.com | 
                 <a href="https://www.linkedin.com/in/zach-w-133415383/" target="_blank">LinkedIn</a> | 
                 <a href="https://github.com/Hypobeggar" target="_blank">zachwatson.dev</a>
