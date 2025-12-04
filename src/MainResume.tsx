@@ -11,7 +11,7 @@ export default function MainResume() {
     </nav>
     <article className={styles.head}>
         <section className={styles.profileSection}>
-            <img className={styles.profile} src="src\assets\img\profile.jpg" alt="profile image"/>
+            <img className={styles.profile} src=".\assets\img\profile.jpg" alt="profile image"/>
             <p className='mb-2 mt-2'>Austin, TX | (512) 555-0193 | zach.watson@email.com | 
                 <a href="https://www.linkedin.com/in/zach-w-133415383/" target="_blank">LinkedIn</a> | 
                 <a href="https://github.com/Hypobeggar" target="_blank">zachwatson.dev</a>
