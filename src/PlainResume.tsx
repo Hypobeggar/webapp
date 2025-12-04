@@ -1,6 +1,7 @@
+import './assets/plain.css'
+
 export default function PlainResume() {
   function handlePrint() {
-    // print stylesheet hides .no-print items, so simply call print()
     window.print()
   }
 

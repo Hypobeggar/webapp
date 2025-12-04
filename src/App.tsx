@@ -1,5 +1,3 @@
-import './App.css'
-import './assets/main.css'
 import { PortfolioCarousel } from './components/PortfolioCarousel'
 import { BrowserRouter, Routes, Route, Link } from "react-router";
 import PlainResume from './PlainResume';
@@ -16,6 +14,9 @@ function App() {
 }
 
 function Home() {
+  import('./App.css')
+  import('./assets/main.css')
+  
   return (
   <div>
     <nav id="navbar">
