@@ -1,4 +1,4 @@
-export default function PlainResume({ onBack }:{ onBack?: () => void }) {
+export default function PlainResume() {
   function handlePrint() {
     // print stylesheet hides .no-print items, so simply call print()
     window.print()
@@ -8,8 +8,10 @@ export default function PlainResume({ onBack }:{ onBack?: () => void }) {
     <div>
           <nav >
             <h1>Zach Watson</h1>
-            <a id="toMain" href="index.html">Main Resume</a>
-            <button id="print-plain">Print Resume</button>
+            <div style={{ display: 'flex', gap: '1rem' }}>
+              <a href="/">Main Resume</a>
+              <button id="print-plain" onClick={handlePrint}>Print Resume</button>
+            </div>
         </nav>
         <section>
             <p>Austin, TX | (512) 555-0193 | zach.watson@email.com | 

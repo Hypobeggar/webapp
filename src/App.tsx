@@ -1,22 +1,27 @@
 import './App.css'
 import './assets/main.css'
 import { PortfolioCarousel } from './components/PortfolioCarousel'
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, Link } from "react-router";
+import PlainResume from './PlainResume';
 
 function App() {
-
-
-
   return (
-  <div>
     <BrowserRouter>
       <Routes>
-        <nav id="navbar">
-            <h1>Zach Watson</h1>
-            <a href="plain.html">Plain Resume</a>
-        </nav>
+        <Route path="/" element={<Home />} />
+        <Route path="/plain" element={<PlainResume />} />
       </Routes>
     </BrowserRouter>
+  )
+}
+
+function Home() {
+  return (
+  <div>
+    <nav id="navbar">
+        <h1>Zach Watson</h1>
+        <Link to="/plain">Plain Resume</Link>
+    </nav>
     <article id="head">
         <section id="profile-section">
             <img id="profile" src="src\assets\img\profile.jpg" alt="profile image"/>
