@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import styles from '../assets/main.module.css'
+import styles from '../assets/Main.module.css'
 type CarouselProps = {
   images?: string[]
   intervalMs?: number
