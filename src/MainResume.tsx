@@ -1,5 +1,5 @@
 import { PortfolioCarousel } from './components/PortfolioCarousel'
-import styles from './assets/main.module.css'
+import styles from './assets/Main.module.css'
 import profileImg from './assets/img/profile.jpg'
 import {Link } from "react-router";
 
