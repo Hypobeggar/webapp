@@ -1,4 +1,7 @@
-# React + TypeScript + Vite
+# Resume Webapp
+
+This web application is a resume webapp using template items. This webapp can be used to act as a basis for my resume. The information listed in the application is a placeholder for a future resume. The images and portfolio will use template images that can be replaced with proper ones at a later date and completed project. It will function as an interesting resume and portfolio and link to a plain version as well. The target audience is recruiters or those looking for people to hire.
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
