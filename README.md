@@ -1,4 +1,20 @@
-# React + TypeScript + Vite
+# Resume Webapp
+
+This web application is a resume webapp using template items. This webapp can be used to act as a basis for my resume. The information listed in the application is a placeholder for a future resume. The images and portfolio will use template images that can be replaced with proper ones at a later date and completed project. It will function as an interesting resume and portfolio and link to a plain version as well. The target audience is recruiters or those looking for people to hire.
+
+## Technologies used
+
+This project uses React as its main framework and a combination of CSS and Tailwind CSS for styling. It also uses Typescript and Vite. 
+
+## Lessons Learned
+
+I have learned how to create components and use routing in React as well as how to style using Tailwind CSS. I have also learned about state management. Due to the simplistic nature of this project, I have not used many features of React but expect to do so in future proejcts.
+
+## Future Scope
+
+The future of this project is filling in the placeholder information with accurate information. The UI may be adjusted as my preferences change. As a form of a resume, the color scheme and design are primarily base on my preference while I try to maintain a format similar to a standard resume. In the plain resume, I may move the routing and print button into a navbar at the top to make switching between pages quicker. I currently feel that this does not suit the style of a simple resume and opt not to do this. I believe that I may be able to increase the modularity of the sections in future.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
