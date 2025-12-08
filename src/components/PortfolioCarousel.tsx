@@ -1,5 +1,4 @@
 import Carousel from './carousel'
-import ProjectGrid from './ProjectGrid'
 import img1 from '../assets/img/1.jpeg'
 import img2 from '../assets/img/2.jpg'
 import img3 from '../assets/img/3.jpg'
@@ -138,8 +137,6 @@ export function PortfolioCarousel() {
           ))}
         </Carousel>
         
-        {/* Projects grid under the carousel */}
-        <ProjectGrid projects={featuredProjects} />
       </div>
     </section>
   );

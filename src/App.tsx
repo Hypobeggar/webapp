@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import PlainResume from './PlainResume';
 import MainResume from './MainResume';
+import Portfolio from './Portifolio';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainResume />} />
         <Route path="/plain" element={<PlainResume />} />
+        <Route path="portfoli" element={<Portfolio/>}/>
       </Routes>
     </BrowserRouter>
   )

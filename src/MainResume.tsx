@@ -1,15 +1,19 @@
 import { PortfolioCarousel } from './components/PortfolioCarousel'
 import styles from './assets/Main.module.css'
 import profileImg from './assets/img/profile.jpg'
-import {Link } from "react-router";
+import Navbar from './components/Navbar'
 
 export default function MainResume() {
     return(
 <div className={styles.container}>
-    <nav className={styles.navbar}>
-        <h1>Zach Watson</h1>
-        <Link to="/plain">Plain Resume</Link>
-    </nav>
+    <Navbar/>
+        {/* Portfolio */}
+    <section className={styles.portfolio}>
+      <h2>Portfolio</h2>
+      <h3>Featured Projects</h3>
+      <PortfolioCarousel/>
+    </section>
+
     <article className={styles.head}>
         <section className={styles.profileSection}>
             <img className={styles.profile} src={profileImg} alt="profile image"/>
@@ -108,12 +112,7 @@ export default function MainResume() {
     </main>
 
 
-    {/* Portfolio */}
-    <section className={styles.portfolio}>
-      <h2>Portfolio</h2>
-      <h3>Featured Projects</h3>
-      <PortfolioCarousel/>
-    </section>
+
 
   </div>
     )
