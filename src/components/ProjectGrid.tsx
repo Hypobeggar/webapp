@@ -1,23 +1,12 @@
 import { useMemo, useState } from 'react'
+import data from '../assets/data.json'
 
-type Project = {
-  id: number
-  title: string
-  description: string
-  image?: string
-  tech: string[]
-  link?: string
-  github?: string
-}
-
-type Props = {
-  projects: Project[]
-}
-
-export default function ProjectGrid({ projects }: Props) {
+export default function ProjectGrid() {
   const [query, setQuery] = useState('')
   const [selectedTech, setSelectedTech] = useState<string | null>(null)
   const [sortMode, setSortMode] = useState<'relevance'|'alpha'>('relevance')
+
+  var projects= data.projects;
 
   const allTech = useMemo(() => {
     const set = new Set<string>()

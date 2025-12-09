@@ -1,86 +1,8 @@
 import Carousel from './carousel'
-import img1 from '../assets/img/1.jpeg'
-import img2 from '../assets/img/2.jpg'
-import img3 from '../assets/img/3.jpg'
-import profileImg from '../assets/img/profile.jpg'
-
-const featuredProjects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "A fully responsive online shopping experience with real-time inventory management and secure payment processing.",
-    image: img1,
-    tech: ["React", "Node.js", "MongoDB"],
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 2,
-    title: "Creative Portfolio App",
-    description: "Interactive portfolio showcase with smooth animations and dynamic content loading for artists and designers.",
-    image: img2,
-    tech: [ "React", "TypeScript", "Tailwind CSS"],
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 3,
-    title: "Task Management System",
-    description: "Collaborative workspace tool with real-time updates, task assignments, and team productivity analytics.",
-    image: img3,
-    tech: ["React", "Firebase", "Tailwind CSS"],
-    link: "#",
-    github: "#"
-  }
-  ,
-  {
-    id: 4,
-    title: "Realtime Chat App",
-    description: "A highly performant messaging solution with presence, typing indicators, and ephemeral rooms.",
-    image: img1,
-    tech: ["Tailwind CSS", "Node.js", "React"],
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 5,
-    title: "Analytics Dashboard",
-    description: "Customizable charts and real-time metrics tailored for product and business analytics.",
-    image: img2,
-    tech: ["TypeScript", "Node.js", "PostgreSQL"],
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 6,
-    title: "Static Site Generator",
-    description: "A lightning-fast SSG built for blogs and docs using modern compile-to-web tooling.",
-    image: img3,
-    tech: [ "Angular"],
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 7,
-    title: "DevOps Pipeline",
-    description: "A container-driven CI/CD pipeline with automated testing, linting and infrastructure as code.",
-    image: profileImg,
-    tech: ["React"],
-    link: "#",
-    github: "#"
-  },
-  {
-    id: 8,
-    title: "3D Visualizer",
-    description: "Interactive 3D product visualizations and immersive UIs for web-based experiences.",
-    image: img2,
-    tech: [ "WebGL", "React", "Canvas"],
-    link: "#",
-    github: "#"
-  }
-];
+import data from '../assets/data.json'
 
 export function PortfolioCarousel() {
+  var featuredProjects= data.projects;
   return (
     <section className="w-full bg-[#000000] py-20 px-6">
       <div className="max-w-6xl mx-auto">

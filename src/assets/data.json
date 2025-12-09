@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "description": "A fully responsive online shopping experience with real-time inventory management and secure payment processing.",
+      "image": "/img/1.jpeg",
+      "tech": ["React", "Node.js", "MongoDB"],
+      "link": "#",
+      "github": "#"
+    },
+    {
+      "id": 2,
+      "title": "Creative Portfolio App",
+      "description": "Interactive portfolio showcase with smooth animations and dynamic content loading for artists and designers.",
+      "image": "/img/2.jpg",
+      "tech": ["React", "TypeScript", "Tailwind CSS"],
+      "link": "#",
+      "github": "#"
+    },
+    {
+      "id": 3,
+      "title": "Task Management System",
+      "description": "Collaborative workspace tool with real-time updates, task assignments, and team productivity analytics.",
+      "image": "/img/3.jpg",
+      "tech": ["React", "Firebase", "Tailwind CSS"],
+      "link": "#",
+      "github": "#"
+    },
+    {
+      "id": 4,
+      "title": "Realtime Chat App",
+      "description": "A highly performant messaging solution with presence, typing indicators, and ephemeral rooms.",
+      "image": "/img/4.jpg",
+      "tech": ["Tailwind CSS", "Node.js", "React"],
+      "link": "#",
+      "github": "#"
+    },
+    {
+      "id": 5,
+      "title": "Analytics Dashboard",
+      "description": "Customizable charts and real-time metrics tailored for product and business analytics.",
+      "image": "/img/5.jpg",
+      "tech": ["TypeScript", "Node.js", "PostgreSQL"],
+      "link": "#",
+      "github": "#"
+    },
+    {
+      "id": 6,
+      "title": "Static Site Generator",
+      "description": "A lightning-fast SSG built for blogs and docs using modern compile-to-web tooling.",
+      "image": "/img/6.jpg",
+      "tech": ["Angular"],
+      "link": "#",
+      "github": "#"
+    },
+    {
+      "id": 7,
+      "title": "DevOps Pipeline",
+      "description": "A container-driven CI/CD pipeline with automated testing, linting and infrastructure as code.",
+      "image": "/img/7.jpg",
+      "tech": ["React"],
+      "link": "#",
+      "github": "#"
+    },
+    {
+      "id": 8,
+      "title": "3D Visualizer",
+      "description": "Interactive 3D product visualizations and immersive UIs for web-based experiences.",
+      "image": "/img/8.jpg",
+      "tech": ["WebGL", "React", "Canvas"],
+      "link": "#",
+      "github": "#"
+    }
+  ]
+}

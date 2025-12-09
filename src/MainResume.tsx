@@ -1,6 +1,6 @@
 import { PortfolioCarousel } from './components/PortfolioCarousel'
 import styles from './assets/Main.module.css'
-import profileImg from './assets/img/profile.jpg'
+import profileImg from '/img/profile.jpg'
 import Navbar from './components/Navbar'
 
 export default function MainResume() {
