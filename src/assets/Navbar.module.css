@@ -5,7 +5,8 @@
   padding-right: 2em; 
   border-bottom: 2px solid #212121; 
   justify-content: space-between; 
-  align-items: center; 
+  align-items: center;
+  border-bottom: 2px solid #212121; 
 }
 .navbar h1 { 
   color: #ebb800; 
@@ -33,3 +34,12 @@
   color: #D3D3D3; 
 }
 
+/* Hide unnecessary items for printing */
+@media print {
+  .navbar {
+    display: none !important;
+  }
+  .links {
+    display: none !important;
+  }
+}

@@ -1,4 +1,5 @@
 import styles from './assets/Plain.module.css'
+import Navbar from './components/Navbar'
 
 export default function PlainResume() {
   function handlePrint() {
@@ -6,11 +7,12 @@ export default function PlainResume() {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className={styles.container}>
           <nav>
             <h1>Zach Watson</h1>
             <div className="flex gap-3 mb-2">
-              <a href="/" className={`${styles.noPrint} pt-1 pb-1`}>Main Resume</a>
               <button className={`${styles.noPrint} p-1 bg-[#DBDBDB] border border-black`} onClick={handlePrint}>Print Resume</button>
             </div>
         </nav>
@@ -121,5 +123,6 @@ export default function PlainResume() {
             </section>
         </main>
     </div>
+    </>
   )
 }

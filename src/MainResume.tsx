@@ -52,13 +52,13 @@ export default function MainResume() {
                             <h3>Front-End Web Developer — Creative Spark Digital Agency</h3>
                             <p>March 2022 – Present | Austin, TX</p>
                             <ul className={styles.textPadding}>
-                                <li>Developed and maintained responsive websites for 15+ clients using React and Tailwind CSS.</li>
-                                <li>Collaborated with UX designers to enhance site accessibility and performance, improving page load speed by 35%.</li>
-                                <li>Built dynamic dashboards and data visualization tools using REST APIs and Chart.js.</li>
-                                <li>Implemented Git version control and agile workflows to streamline project collaboration.</li>
+                                <li className='mr-12'>Developed and maintained responsive websites for 15+ clients using React and Tailwind CSS.</li>
+                                <li className='mr-12'>Collaborated with UX designers to enhance site accessibility and performance, improving page load speed by 35%.</li>
+                                <li className='mr-12'>Built dynamic dashboards and data visualization tools using REST APIs and Chart.js.</li>
+                                <li className='mr-12'>Implemented Git version control and agile workflows to streamline project collaboration.</li>
                             </ul>
                         </li>
-                        <li>
+                        <li className='ml-4'>
                             <h3>Web Developer Intern — TechWorks Studio</h3>
                             <p>June 2021 – February 2022 | Remote</p>
                             <ul className={styles.textPadding}>

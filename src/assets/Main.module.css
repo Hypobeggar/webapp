@@ -4,7 +4,6 @@
     color: #C0C0C0;
     line-height: 2em;
     font-size: 16px;
-    font-size: 1.125em;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -63,7 +62,7 @@
 
 .textPadding li { 
   padding-top: 0.5em; 
-  margin-left: 1em; 
+  margin-left: 1.125em; 
   list-style: none; 
 }
 
