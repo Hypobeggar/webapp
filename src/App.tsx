@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainResume />} />
         <Route path="/plain" element={<PlainResume />} />
-        <Route path="portfoli" element={<Portfolio/>}/>
+        <Route path="portfolio" element={<Portfolio/>}/>
       </Routes>
     </BrowserRouter>
   )
