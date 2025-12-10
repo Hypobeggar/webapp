@@ -1,11 +1,14 @@
 import ProjectGrid from './components/ProjectGrid'
 import Navbar from './components/Navbar'
 import {PortfolioCarousel} from './components/PortfolioCarousel'
+import styles from './assets/Portfolio.module.css'
 export default function MainResume() {
     return(
-        <div>
+        <div className={styles.container}>
             <Navbar/>
             <PortfolioCarousel/>
-            <ProjectGrid/>
+            <main className={`${styles.main}`}>
+                <ProjectGrid/>
+            </main>
         </div>
     )}
