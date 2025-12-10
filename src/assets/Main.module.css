@@ -69,8 +69,9 @@
 .main { 
   display: flex; 
   flex-direction: column; 
-  gap: 2em; 
-  margin: 2em; 
+  gap: 4em; 
+  margin-left: 5em;
+  margin-right: 5em; 
 }
 
 .container h1,
@@ -144,7 +145,8 @@
   display: grid; 
   grid-template-columns: 1fr; 
   row-gap: 2em; 
-  margin: 2em; 
+  margin: 5em; 
+
 }
 
 .profileSection { 
@@ -223,19 +225,21 @@
 
   .resumeInfo { 
     flex: 1 1 45%; 
+    min-height: 30vh;;
   }
 
   .flexContainer { 
     display: flex; 
     flex-wrap: wrap; 
     flex-direction: row; 
-    gap: 2em; 
+    margin-top: 0em;
+    gap: 4em; 
   }
 
   .experience { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    gap: 2em; 
+    gap: 4.125em; 
   }
 
   .container article section { 

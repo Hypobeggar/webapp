@@ -8,10 +8,9 @@ export default function MainResume() {
     return(
     <>
     <Navbar/>
-    <p className={styles.statement}>Crafting digital experiences where technology meets design</p>
-    <section className={styles2.portfolio}>
-        
-    <PortfolioCarousel />
+    <section className={`${styles2.container} mt-0 py-0`}>
+        <p className={styles2.statement}>Crafting digital experiences where technology meets design</p>
+        <PortfolioCarousel />
     </section>
     <div className={styles.container}>
 

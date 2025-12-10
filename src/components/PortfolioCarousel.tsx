@@ -1,16 +1,16 @@
 import Carousel from './carousel'
 import data from '../assets/data.json'
-
+import styles from '../assets/Carousel.module.css'
 export function PortfolioCarousel() {
   var featuredProjects= data.projects;
   return (
-    <section className="w-full bg-[#000000] py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className={`${styles.whole} w-full`}>
+      <div className="max-w-screen-xl mx-auto">
 
 
-        <Carousel className="w-full" intervalMs={4000}>
+        <Carousel intervalMs={4000}>
           {featuredProjects.slice(0, 3).map((project) => (
-            <div key={project.id} className="grid md:grid-cols-2 gap-8 bg-[#1A1A1A] rounded-lg overflow-hidden border border-[#912DE1]/30 hover:border-[#A133D7] transition-all">
+            <div key={project.id} className={`${styles.carousel} grid md:grid-cols-2 gap-8 bg-[#1A1A1A] rounded-lg overflow-hidden border border-[#912DE1]/30 hover:border-[#A133D7] transition-all`}>
                   {/* Image Side */}
                   <div className="relative h-80 md:h-auto overflow-hidden">
                     <img 
