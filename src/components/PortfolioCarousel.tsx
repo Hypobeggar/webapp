@@ -5,14 +5,14 @@ export function PortfolioCarousel() {
   var featuredProjects= data.projects;
   return (
     <section className={`${styles.whole} w-full`}>
-      <div className="max-w-screen-xl mx-auto">
+      <div className=" mx-auto">
 
 
         <Carousel intervalMs={4000}>
           {featuredProjects.slice(0, 3).map((project) => (
-            <div key={project.id} className={`${styles.carousel} grid md:grid-cols-2 gap-8 bg-[#1A1A1A] rounded-lg overflow-hidden border border-[#912DE1]/30 hover:border-[#A133D7] transition-all`}>
+            <div key={project.id} className={` grid md:grid-cols-2 bg-[#1A1A1A] rounded-lg overflow-hidden border border-[#912DE1]/30 hover:border-[#A133D7] transition-all`}>
                   {/* Image Side */}
-                  <div className="relative h-80 md:h-auto overflow-hidden">
+                  <div className={`${styles.carouselImg} relative h-80 md:h-auto overflow-hidden`}>
                     <img 
                       src={project.image} 
                       alt={project.title}

@@ -3,27 +3,35 @@
   background-color: black;
 }
 .whole{
-  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5em;
+  
 }
 .statement { 
-  font-size: 2em; 
+  font-size: 2.5em; 
   line-height: 1.5em; 
   color: #ebb800; 
+  padding-top: 1em;
 }
 
-.carousel { 
-
-
-
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: auto;
+    padding-top: 0.5em;
 }
+
 
 .carouselImg { 
-  width: 80%; 
   height: 500px; 
   object-fit: cover; 
 }
 
 .caraButtons { 
+  color: #C0C0C0;
   height: 5em; 
   width: 5em; 
   user-select: none; 

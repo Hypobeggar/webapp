@@ -6,9 +6,9 @@
     font-size: 16px;
     margin: 0;
     display: flex;
-    flex-direction: column;
     min-width: 320px;
     min-height: auto;
+    justify-content: center;
 }
 
 .container a {
@@ -71,7 +71,9 @@
   flex-direction: column; 
   gap: 4em; 
   margin-left: 5em;
-  margin-right: 5em; 
+  margin-right: 5em;
+  margin-bottom: 5em;
+  max-width: 1500px;
 }
 
 .container h1,
@@ -143,9 +145,8 @@
 
 .head { 
   display: grid; 
-  grid-template-columns: 1fr; 
-  row-gap: 2em; 
-  margin: 5em; 
+  grid-template-columns: 1fr 2fr; 
+  row-gap: 2em;
 
 }
 

@@ -48,7 +48,7 @@ export default function Carousel({ images, intervalMs = 5000, children }: Carous
       aria-label="Portfolio carousel"
     >
       <button
-        className={`${styles.caraButtons} mr-1`}
+        className={`${styles.caraButtons}`}
         type="button"
         aria-label="Previous"
         onClick={() => setIndex((i) => (i - 1 + slideCount) % slideCount)}
@@ -61,11 +61,11 @@ export default function Carousel({ images, intervalMs = 5000, children }: Carous
           {React.Children.toArray(children)[index as number]}
         </div>
       ) : (
-        <img className={styles.carouselImg} src={images?.[index]} alt={`Portfolio image ${index + 1}`} />
+        <img src={images?.[index]} alt={`Portfolio image ${index + 1}`} />
       )}
 
       <button
-        className={`${styles.caraButtons} ml-1`}
+        className={`${styles.caraButtons}`}
         type="button"
         aria-label="Next"
         onClick={() => setIndex((i) => (i + 1) % slideCount)}
