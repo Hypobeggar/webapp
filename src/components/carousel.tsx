@@ -56,13 +56,26 @@ export default function Carousel({ images, intervalMs = 5000, children }: Carous
         &lt;
       </button>
 
-      {children ? (
-        <div data-slot="carousel-item">
-          {React.Children.toArray(children)[index as number]}
+      <div className={`${styles.carouselContent}`}>
+        <div
+          className={`${styles.carouselInner}`}
+          style={{ transform: `translateX(-${index * 100}%)` }}
+        >
+          {children ? (
+            React.Children.toArray(children).map((child, i) => (
+              <div key={i} className={`${styles.carouselSlide}`}>
+                {child}
+              </div>
+            ))
+          ) : (
+            images?.map((img, i) => (
+              <div key={i} className={`${styles.carouselSlide}`}>
+                <img src={img} alt={`Portfolio image ${i + 1}`} className={`${styles.carouselImg}`} />
+              </div>
+            ))
+          )}
         </div>
-      ) : (
-        <img src={images?.[index]} alt={`Portfolio image ${index + 1}`} />
-      )}
+      </div>
 
       <button
         className={`${styles.caraButtons}`}
