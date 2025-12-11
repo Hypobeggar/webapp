@@ -6,7 +6,9 @@ export default function MainResume() {
     return(
         <div className={styles.container}>
             <Navbar/>
-            <PortfolioCarousel/>
+            <div className='pt-12'>
+                <PortfolioCarousel/>
+            </div>
             <main className={`${styles.main}`}>
                 <ProjectGrid/>
             </main>
