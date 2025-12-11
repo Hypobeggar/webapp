@@ -33,6 +33,7 @@
   display: flex;
   transition: transform 0.6s ease-in-out;
   width: 100%;
+  max-width: 2000px;
 }
 
 .carouselSlide {
@@ -54,6 +55,9 @@
   height: 5em; 
   width: 5em; 
   user-select: none; 
+  border-color: #C0C0C0;
+  border-radius: 50%;
+  border-width: 2px;
 }
 
 

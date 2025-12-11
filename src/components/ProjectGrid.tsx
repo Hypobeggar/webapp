@@ -3,7 +3,7 @@ import data from '../assets/data.json'
 
 export default function ProjectGrid() {
   const [query, setQuery] = useState('')
-  const [selectedTech, setSelectedTech] = useState<string | null>(null)
+  const [selectedTechs, setSelectedTechs] = useState<Set<string>>(new Set())
   const [sortMode, setSortMode] = useState<'relevance'|'alpha'>('relevance')
 
   var projects= data.projects;
@@ -14,30 +14,40 @@ export default function ProjectGrid() {
     return Array.from(set).sort((a,b) => a.localeCompare(b))
   }, [projects])
 
+  const toggleTech = (tech: string) => {
+    const newSet = new Set(selectedTechs)
+    if (newSet.has(tech)) {
+      newSet.delete(tech)
+    } else {
+      newSet.add(tech)
+    }
+    setSelectedTechs(newSet)
+  }
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     let list = projects.filter(p => {
       const textMatch = !q || p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)
-      const techMatch = !selectedTech || p.tech.includes(selectedTech)
+      const techMatch = selectedTechs.size === 0 || p.tech.some(t => selectedTechs.has(t))
       return textMatch && techMatch
     })
 
     if (sortMode === 'alpha') {
       list = list.slice().sort((a,b) => a.title.localeCompare(b.title))
-    } else if (sortMode === 'relevance' && selectedTech) {
+    } else if (sortMode === 'relevance' && selectedTechs.size > 0) {
 
       list = list.slice().sort((a,b) => {
-        const aHas = a.tech.includes(selectedTech) ? 1 : 0
-        const bHas = b.tech.includes(selectedTech) ? 1 : 0
-        return bHas - aHas
+        const aMatches = a.tech.filter(t => selectedTechs.has(t)).length
+        const bMatches = b.tech.filter(t => selectedTechs.has(t)).length
+        return bMatches - aMatches
       })
     }
 
     return list
-  }, [projects, query, selectedTech, sortMode])
+  }, [projects, query, selectedTechs, sortMode])
 
   return (
-    <section className="mt-10">
+    <section className="m-10">
       <div className="flex items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-2">
           <input
@@ -58,26 +68,36 @@ export default function ProjectGrid() {
             <option value="alpha">Alphabetical</option>
           </select>
         </div>
+      
 
-        <div className="flex gap-2 items-center text-sm">
-          <label htmlFor="tech-filter" className="text-[#C0C0C0]">Filter:</label>
-          <div className="max-w-[60vw]">
-            <select
-              id="tech-filter"
-              aria-label="Filter projects by technology"
-              value={selectedTech ?? ''}
-              onChange={(e) => setSelectedTech(e.target.value ? e.target.value : null)}
-              className="px-3 py-2 bg-[#1A1A1A] border border-[#212121] rounded text-sm text-[#C0C0C0]"
+      <div className="">
+        <p className="text-sm text-[#C0C0C0] mb-3">Filter by technology:</p>
+        <div className="grid grid-cols-5 gap-2">
+          {allTech.map(tech => (
+            <button
+              key={tech}
+              onClick={() => toggleTech(tech)}
+              className={`px-4 py-2 rounded text-sm transition-colors ${
+                selectedTechs.has(tech)
+                  ? 'bg-[#912DE1] border border-[#912DE1] text-white'
+                  : 'bg-[#1A1A1A] border border-[#212121] text-[#C0C0C0] hover:border-[#912DE1]'
+              }`}
+              aria-pressed={selectedTechs.has(tech)}
             >
-              <option value="">All</option>
-              {allTech.map(t => (
-                <option key={t} value={t}>{t}</option>
-              ))}
-            </select>
-          </div>
+              {tech}
+            </button>
+          ))}
         </div>
+        {selectedTechs.size > 0 && (
+          <button
+            onClick={() => setSelectedTechs(new Set())}
+            className="mt-3 text-xs text-[#C0C0C0] hover:text-[#00DEDE] transition-colors"
+          >
+            Clear all filters
+          </button>
+        )}
       </div>
-
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {filtered.length === 0 ? (
           <div className="text-sm text-[#C0C0C0]">No projects match your search/filter.</div>

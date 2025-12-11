@@ -7,7 +7,7 @@
     margin: 0;
     display: flex;
     min-width: 320px;
-    min-height: auto;
+    min-height: 100vh;
     justify-content: center;
     padding-top: 5em;
 }
@@ -231,7 +231,9 @@
 
   .resumeInfo { 
     flex: 1 1 45%; 
-    min-height: 30vh;;
+    min-height: 325px;
+    height: 30vh;
+    max-height: 380px;
   }
 
   .flexContainer { 

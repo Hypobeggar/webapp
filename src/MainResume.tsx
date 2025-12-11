@@ -31,7 +31,7 @@ export default function MainResume() {
                 <p>Creative and detail-oriented Web Developer with 4+ years of experience designing, building, and optimizing responsive websites and web applications. Skilled in both front-end and back-end technologies, with a focus on clean UI, strong UX, and scalable code. Passionate about building modern digital experiences that bridge technology and design.</p>
             </section>
         </article>
-        <section>
+        <section className='min-h-[270px] h-[30vh] max-h-[400px]'>
             <h2>Technical Skills</h2>
             <hr />
             <ul className={styles.textPadding}>
